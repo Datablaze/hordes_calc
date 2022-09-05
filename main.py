@@ -1,7 +1,7 @@
+
 import discord
 from discord.ext import commands
 import os
-
 
 
 
@@ -413,7 +413,7 @@ async def defense(ctx,i:float,j:float,z:float):
   defense.add_field(name="Your defense:",value=i,inline=True)
   defense.add_field(name="Entered incoming dmg :",value=j,inline=True)
   defense.add_field(name="Your hp :",value=z,inline=True)
-  defense.add_field(name="---------------------------⚔️--------------------------",value="```--CALCULATED DETAILS--```",inline=False)
+  defense.add_field(name="---------------------------⚔️----------------------------",value="```--CALCULATED DETAILS--```",inline=False)
   defense.set_thumbnail(url="https://media.discordapp.net/attachments/844630736362274826/981582799297458236/hordes_presskit_real.png")
   defense.set_footer(text="usage: !defense <enter your def> <incoming damage> <your hp>")
   
@@ -465,7 +465,7 @@ async def d(ctx,i:float,j:float,z:float):
   defense.add_field(name="Your defense:",value=i,inline=True)
   defense.add_field(name="Entered incoming dmg :",value=j,inline=True)
   defense.add_field(name="Your hp :",value=z,inline=True)
-  defense.add_field(name="---------------------------⚔️--------------------------",value="```--CALCULATED DETAILS--```",inline=False)
+  defense.add_field(name="---------------------------⚔️----------------------------",value="```--CALCULATED DETAILS--```",inline=False)
   defense.set_thumbnail(url="https://media.discordapp.net/attachments/844630736362274826/981582799297458236/hordes_presskit_real.png")
   defense.set_footer(text="usage: !defense <enter your def> <incoming damage> <your hp>")
   
@@ -559,7 +559,7 @@ async def dps(ctx,class1:str,min:float,max:float,haste:float,crit:float):
      dps.add_field(name="-------------------------------------------------------------", value="```--Before buffs--```",inline=False)
      dps.add_field(name="Min", value=min,inline=True)
      dps.add_field(name="Max", value=max,inline=True)
-     dps.add_field(name="Haste", value=haste,inline=True)
+     dps.add_field(name="Haste", value=haste,inline=False)
      dps.add_field(name="Crit", value=crit,inline=True)
      dps.add_field(name="-----------------------------------------------------------------------------------", value="```--After buffs--```",inline=False)
      dps.add_field(name="Min", value=min+20,inline=True)
@@ -576,6 +576,50 @@ async def dps(ctx,class1:str,min:float,max:float,haste:float,crit:float):
   else:
     dps.add_field(name="Invalid syntax", value="usage : !dps <enter ur class > <min> <max> <haste> <crit>",inline=False)
     await ctx.send(embed=dps)
+    
+    
+
+
+@client.command()
+async def datablaze(ctx):
+    datablaze=discord.Embed(title="```HELLO ITS ME !```",color=0x39FF14)
+    datablaze.set_image(url="https://media.discordapp.net/attachments/822116199877181533/1014480517145559100/unknown.png")
+    await ctx.send(embed=datablaze)
+    
+@client.command()
+async def wyrm(ctx):
+    wyrm=discord.Embed(title="```WYRM```",color=0x39FF14)
+    wyrm.set_image(url="https://media.discordapp.net/attachments/1003284338454048948/1006497246302445568/unknown.png")
+    await ctx.send(embed=wyrm)
+    
+    
+@client.command()
+async def yt(ctx):
+    yt=discord.Embed(title="```MY YOUTUBE CHANNEL```",url="https://www.youtube.com/channel/UCHk0l3XUXYRHpHo6vI2xYjg",color=0xff0000 )
+    yt.add_field(name="Link :", value="https://www.youtube.com/channel/UCHk0l3XUXYRHpHo6vI2xYjg",inline=True)
+    yt.set_image(url="https://media.discordapp.net/attachments/822116199877181533/1014418551349706792/unknown.png?width=899&height=580")
+    yt.set_thumbnail(url="https://media.discordapp.net/attachments/924626925161422849/929703058437443624/speedy2.png?width=580&height=580")
+    yt.set_footer(text="Pls make sure to subscribe :D")
+    
+    await ctx.send(embed=yt)
+    
+    
+    
+    
+    
+  
+  
+  
+  
+  
+      
+    
+    
+
+
+  
+
+
 token = os.environ.get("TOKEN")
 
 client.run(TOKEN)
